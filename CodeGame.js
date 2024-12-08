@@ -1,10 +1,12 @@
-let attempts = 10;
-let gameLevel;
-let mineCount = 10;
-let treasurePosition;
-let minePositions = [];
-let playerName = '';
+let attempts = 10; // عدد المحاولات المتبقية للاعب.
+let gameLevel; // مستوى اللعبة (يتم تحديده بناءً على اختيار اللاعب من الرابط).
+let mineCount = 10; // عدد الألغام الافتراضي.
+let treasurePosition; // موقع الكنز (يتم تحديده عشوائيًا).
+let minePositions = []; // مصفوفة تحتوي على المواقع التي توجد بها الألغام.
+let playerName = ''; // اسم اللاعب.
 
+
+// تقوم هذه الدالة بجلب معلومات اللاعب (اسمه ومستوى اللعبة)
 function getPlayerInfo() {
     const urlParams = new URLSearchParams(window.location.search);
     playerName = urlParams.get('player-name');
@@ -15,10 +17,12 @@ function getPlayerInfo() {
     }
 }
 
+// انشاء لوحة اللعبة باستخدام 64 زر
+
 function createGameBoard() {
     const board = document.getElementById('game-board');
     const totalCells = 64;
-    
+
     treasurePosition = Math.floor(Math.random() * totalCells);
     while (minePositions.length < mineCount) {
         let position = Math.floor(Math.random() * totalCells);
@@ -35,8 +39,12 @@ function createGameBoard() {
     }
 }
 
+//التفاعل مع نقر الازرار
+
 function handleButtonClick(index, button) {
     if (minePositions.includes(index)) {
+
+        // اظهار رسالة الخسارة 
 
         button.innerHTML = '<img src="images/bomb.png" alt="Bomb">';
         playSound('lose');
@@ -44,12 +52,14 @@ function handleButtonClick(index, button) {
         endGame('lose');
     } else if (index === treasurePosition) {
 
+        // اظهار رسالة مع حكمة وانهاء اللعبة 
         button.innerHTML = '<img src="images/treasure.png" alt="Treasure">';
         playSound('win');
         showTreasureText();
         endGame('win');
     } else {
 
+        // تقليل عدد المحاولات , تعطيل الزر وتغيير لونه 
         button.disabled = true;
         button.style.backgroundColor = 'lightgray';
         attempts--;
@@ -62,6 +72,8 @@ function handleButtonClick(index, button) {
 }
 
 
+// انهاء اللعبة عن طريق تعطيل جميع الأزرار.
+
 function endGame(result) {
     const buttons = document.querySelectorAll('#game-board button');
     buttons.forEach(button => button.disabled = true);
@@ -70,7 +82,7 @@ function endGame(result) {
     }
 }
 
-
+// عرض رسالة عشوائية مع حكمة اذا حصل اللاعب الكنز 
 function showTreasureText() {
     const wisdomArray = [
         "A smile is a free way to brighten someone’s day.",
