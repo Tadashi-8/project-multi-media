@@ -5,23 +5,26 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
+    background-image: url('P.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
 }
 
- 
 .container {
     max-width: 800px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    border-radius: 15px; 
 }
 
 h1 {
     font-size: 36px;
-    color: #444;
+    color: #333;
     margin-bottom: 20px;
-
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .grid {
@@ -30,8 +33,8 @@ h1 {
     grid-template-rows: repeat(8, 80px);
     gap: 10px;
     margin-top: 20px;
+    justify-content: center;
 }
-
 button {
     width: 80px;
     height: 80px;
@@ -39,20 +42,16 @@ button {
     color: #fff;
     background-color: #007bff;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.button3 {
-    padding: 14px 40px;
 }
 
 
 button:hover {
-    background-color: #0057b33f;
-    transform: scale(1.05);
+    background-color: #0056b3;
+    transform: scale(1.1);
 }
 
 button:disabled {
@@ -62,14 +61,24 @@ button:disabled {
 }
 
 button:active {
-    background-color: #e60000;
+    background-color: #e63946; 
     transform: scale(0.95);
 }
 
-body{
-    
-background-image: url('P.jpeg');
-background-size: cover; 
-
+.button3 {
+    padding: 14px 40px;
+    font-size: 18px;
+    background-color: #28a745;
+    color: white;
+    border-radius: 10px;
 }
 
+.button3:hover {
+    background-color: #218838;
+    transform: scale(1.1);
+}
+
+.button3:active {
+    background-color: #1e7e34;
+    transform: scale(0.95);
+}
