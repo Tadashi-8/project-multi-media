@@ -6,6 +6,7 @@ body {
     margin: 0;
     padding: 0;
 }
+
  
 .container {
     max-width: 800px;
@@ -47,7 +48,7 @@ button {
 
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #0057b33f;
     transform: scale(1.05);
 }
 
@@ -61,3 +62,11 @@ button:active {
     background-color: #e60000;
     transform: scale(0.95);
 }
+
+body{
+    
+background-image: url('P.jpeg');
+background-size: cover; 
+
+}
+
