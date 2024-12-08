@@ -7,10 +7,7 @@ body {
     padding: 0;
 }
 
-<<<<<<< HEAD:3.css
  
-=======
->>>>>>> 8fa00178c18abd3630520fa4c076559ef1e9510e:style.css
 .container {
     max-width: 800px;
     margin: 50px auto;
@@ -67,7 +64,6 @@ button:disabled {
 button:active {
     background-color: #e60000;
     transform: scale(0.95);
-<<<<<<< HEAD:3.css
 }
 
 body{
@@ -77,6 +73,3 @@ background-size: cover;
 
 }
 
-=======
-}
->>>>>>> 8fa00178c18abd3630520fa4c076559ef1e9510e:style.css
