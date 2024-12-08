@@ -7,7 +7,10 @@ body {
     padding: 0;
 }
 
+<<<<<<< HEAD:3.css
  
+=======
+>>>>>>> 8fa00178c18abd3630520fa4c076559ef1e9510e:style.css
 .container {
     max-width: 800px;
     margin: 50px auto;
@@ -21,7 +24,7 @@ h1 {
     font-size: 36px;
     color: #444;
     margin-bottom: 20px;
-    
+
 }
 
 .grid {
@@ -44,7 +47,10 @@ button {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
-.button3 {padding: 14px 40px;}
+
+.button3 {
+    padding: 14px 40px;
+}
 
 
 button:hover {
@@ -61,6 +67,7 @@ button:disabled {
 button:active {
     background-color: #e60000;
     transform: scale(0.95);
+<<<<<<< HEAD:3.css
 }
 
 body{
@@ -70,3 +77,6 @@ background-size: cover;
 
 }
 
+=======
+}
+>>>>>>> 8fa00178c18abd3630520fa4c076559ef1e9510e:style.css
